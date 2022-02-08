@@ -2,8 +2,8 @@
 
 namespace Gebruederheitz\Wordpress;
 
-class GoogleTagManager {
-
+class GoogleTagManager
+{
     private const TEMPLATE_PATH = __DIR__ . '/../templates/snippet.php';
     private const OVERRIDE_PATH = 'template-parts/blocks/gtm.php';
 
@@ -22,7 +22,7 @@ class GoogleTagManager {
     ) {
         if (!empty($containerId)) {
             $this->containerId = $containerId;
-        } else if (defined('GTM_CONTAINER_ID') && !empty(GTM_CONTAINER_ID)) {
+        } elseif (defined('GTM_CONTAINER_ID') && !empty(GTM_CONTAINER_ID)) {
             $this->containerId = GTM_CONTAINER_ID;
         }
 
@@ -49,4 +49,3 @@ class GoogleTagManager {
         // ob_end_clean();
     }
 }
-
