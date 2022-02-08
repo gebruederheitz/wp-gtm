@@ -1,6 +1,6 @@
 {
   "name": "@gebruederheitz/wp-gtm-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utilities for the gebruederheitz/wp-gtm PHP composer package",
   "main": "",
   "engines": {
