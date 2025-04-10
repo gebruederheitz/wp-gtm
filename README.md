@@ -63,6 +63,28 @@ constructor's second parameter and use that file instead.
 new \Gebruederheitz\Wordpress\GoogleTagManager(null, 'partials/tagmanager.twig.php');
 ```
 
+### Using a custom GTM script url (server-side tagging)
+
+By default the url to load the GTM script from is `https://www.googletagmanager.com/gtm.js `.
+You can override that url via your `.env` file like this:
+
+```dotenv
+# .env
+
+#--------------------------------------------------------------------------------------------------#
+#                                   GOOGLE TAGMANAGER                                              #
+# Adds Google Tagmanager snippets                                                                  #
+#--------------------------------------------------------------------------------------------------#
+GTM_CONTAINER_ID=GTM-XXXXX
+GTM_SCRIPT_URL=https://my-custom-server.com/GTM.js
+```
+
+You can also pass the custom url as an argument to the constructor.
+
+```php
+new \Gebruederheitz\Wordpress\GoogleTagManager(null, null, 'https://my-custom-server.com/GTM.js');
+```
+
 
 
 ## Development
