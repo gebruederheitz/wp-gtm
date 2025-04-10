@@ -37,7 +37,7 @@ class GoogleTagManager
 
         if (!empty($overrideGtmScriptUrl)) {
             $this->gtmScriptUrl = $overrideGtmScriptUrl;
-        } else if (defined('GTM_SCRIPT_URL') && !empty(GTM_SCRIPT_URL)) {
+        } elseif (defined('GTM_SCRIPT_URL') && !empty(GTM_SCRIPT_URL)) {
             $this->gtmScriptUrl = GTM_SCRIPT_URL;
         }
 
@@ -55,7 +55,10 @@ class GoogleTagManager
         }
 
         // ob_start();
-        load_template($templatePathUsed, false, [$this->containerId, $this->gtmScriptUrl]);
+        load_template($templatePathUsed, false, [
+            $this->containerId,
+            $this->gtmScriptUrl,
+        ]);
         // $content = ob_get_contents();
         // ob_end_clean();
     }
