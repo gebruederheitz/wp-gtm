@@ -6,11 +6,11 @@ class GoogleTagManager
 {
     private const TEMPLATE_PATH = __DIR__ . '/../templates/snippet.php';
     private const OVERRIDE_PATH = 'template-parts/blocks/gtm.php';
-    private const GTM_SCRIPT_URL = 'https://www.googletagmanager.com/gtm.js';
+    private const DEFAULT_GTM_SCRIPT_URL = 'https://www.googletagmanager.com/gtm.js';
 
     private $containerId;
     private $overridePath = self::OVERRIDE_PATH;
-    private $gtmScriptUrl = self::GTM_SCRIPT_URL;
+    private $gtmScriptUrl = self::DEFAULT_GTM_SCRIPT_URL;
 
     /**
      * @param string|null $containerId A custom GTM container ID to override the
